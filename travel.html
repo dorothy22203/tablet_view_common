@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Borders: Your Passport to Unforgettable Adventures</title>
+    <!-- Link to the reset stylesheet -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Get all dropdown buttons
+        var dropdowns = document.querySelectorAll('.dropdown');
+
+        // Toggle dropdown menu on button click
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener("click", function(event) {
+                event.stopPropagation(); // Prevents the click event from propagating to the document level
+                var dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.toggle('show'); // Toggles the 'show' class on the dropdown menu, displaying or hiding it
+            });
+
+            // Close dropdowns when clicking outside of the specific dropdown menu
+            document.addEventListener("click", function(event) {
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var dropdownContent = dropdowns[i].querySelector('.dropdown-content');
+                    if (dropdownContent.classList.contains('show') && !dropdowns[i].contains(event.target)) {
+                        dropdownContent.classList.remove('show');
+                    }
+                }
+            });
+        }
+    });
+    </script>
+
+</head>
+<body>
+    <header><div class="header-animation"><h1>Travel</h1></div></header>
+    <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home/Recipes</a></li>
+            <!-- <li><a href="travel.html">Travel</a></li> -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Travel ▾</a>
+                <div class="dropdown-content">
+                    <a href="#guangzhou">Guangzhou, China</a>
+                    <a href="#san-francisco">San Francisco, USA</a>
+                    <a href="#shanghai">Shanghai, China</a>
+                    <a href="#yellowstone">Yellowstone, USA</a>
+                </div>
+            </li>
+            <li><a href="pets.html">Pets</a></li>
+        </ul>
+    </nav>
+    <main id = "main">
+        <div id = "guangzhou">
+            <h2>Guangzhou, China</h2>
+    
+            <img src="images/guangzhou_canton_tower.gif" width="400" alt="Canton Tower GIF">
+            <img src="images/guangzhou_canton_tower.jpg" width = "400" alt="Canton Tower on waterside.">
+
+            <h3>Geographical Location: Asia</h3>
+            <p>Guangzhou is the capital and largest city of Guangdong province in southern China. Located on the Pearl River about 120 km (75 mi) north-northwest of Hong Kong and 145 km (90 mi) north of Macau, Guangzhou has a history of over 2,200 years and was a major terminus of the maritime Silk Roa it continues to serve as a major port and transportation hub as well as being one of China's three largest cities. </p>
+            <p>Guangzhou is celebrated for its many handicraft products, including ivory carvings, jade objects, embroideries, fans, porcelain, and paper umbrellas. These, along with the citys famous cuisine and its many museums and other cultural attractions, have made Guangzhou one of China&#39;s principal tourist destinations.</p>
+
+            <h3>Photo Gallery</h3>
+            <div class="container">
+            <figure>
+                <img src="images/guangzhou_shangxiajiu_pedestrian_street.jpg" width = "200" height = "200" alt="Shangxiajiu pedestrian street">
+                <figcaption>Shangxiajiu pedestrian street in Guangzhou, a bustling street full of places to eat and shop!</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/guangzhou_opera_house.jpg" width = "200" height = "200" alt="Guangzhou Opera House">
+                <figcaption>Guangzhou Opera house on the shore of the Pearl River: Concerts, dances, and performance art happen year-round here.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/guangzhou_pearlriver.jpg" width = "200" height = "200" alt="Night time river view">
+                <figcaption>Pearl River offers night cruises, where tourists can enjoy the lights of the city at night as well as get a nice view of the Canton Tower.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/guangzhou_liwanpark.jpg" width = "200" height = "200" alt="Liwan Park bridges">
+                <figcaption>Liwan Park has lots to offer. With Cantoneese Opera, theater, singing, acrobatics, etc. there is lots of Chinese history depicted. Take pictures and rent a paddleboat!</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/guangzhou_sunyatsen.jpg" width = "200" height = "200" alt="Temple of Sun Yat-sen Memorial hall">
+                <figcaption>Built in the traditional Lingnan architectural style, the temple of Sun Yat-sen commemorates the life of Dr. Sun Yat-sen, a political theorist and leader of modern China. </figcaption>
+            </figure>
+            </div>
+            <!--Bianca Hiew-->
+        </div>
+        <div id = "san-francisco">
+            <h2>San Francisco</h2>
+    
+            <img src="images/San_Francisco_bridge.gif" width="400" alt="Golden Gate Bridge GIF">
+            <img src="images/San_Francisco_bridge.jpeg" width = "400" alt="Golden Gate Bridge">
+
+            <h3>Geographical Location: North America</h3>
+            <p>San Francisco is a great location to visit with many landmarks, including the Golden Gate Bridge and Alcatraz. Located in Northern California, San Francisco is one of the most populated cities in California with a population of 815,000. The city is also a center of culture and industry. San Francisco is home to a thriving tech industry.</p>
+            <p>San Francisco has many trails and parks where you can hike or enjoy a walk. The Presidio is a large park with hiking trails and paths surrounding the Golden Gate Bridge area. One can see picturesque views of the bay and its wildlife.</p>
+
+            <h3>Photo Gallery</h3>
+            <div class="container">
+            <figure>
+                <img src="images/San_Francisco_Alcatraz.jpeg" width = "200" height = "200" alt="Alcatraz prison">
+                <figcaption>Alcatraz Island</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/San_Francisco_Lombard.jpeg" width = "200" height = "200" alt="Lombard street in San Francisco">
+                <figcaption>Lombard Street</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/San_Francisco_painted_ladies.jpeg" width = "200" height = "200" alt="Painted Ladies">
+                <figcaption>The Painted Ladies</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/San_Francisco_street.jpeg" width = "200" height = "200" alt="Steep hill">
+                <figcaption>Hill in San Francisco</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/San_Francisco_palace.jpeg" width = "200" height = "200" alt="Palace of Fine Arts in San Francisco">
+                <figcaption>The Palace of Fine Arts in San Francisco</figcaption>
+            </figure>
+            </div>
+        </div>
+        <div id = "shanghai">
+            <h2>Shanghai, China</h2>
+    
+            <img src="images/shanghai_skyline.GIF" width="400" alt="Shanghai Skyline GIF">
+            <img src="images/shanghai_skyline.jpeg" width = "400" alt="Shanghai Skyline">
+
+            <h3>Geographical Location: Asia</h3>
+            <p>Shanghai, a vibrant metropolis, is nestled along the eastern coast of China. With a population of over 26 million, it ranks as one of the world's most populous cities and serves as a global financial hub. The cityscape of Shanghai is an exquisite blend of history and modernity, where towering skyscrapers such as the iconic Oriental Pearl Tower and the Shanghai Tower punctuate the skyline alongside historical landmarks like the Bund, a waterfront promenade that showcases colonial-era architecture.</p>
+            <p>The city has an unparalleled shopping scene that caters to all tastes, from luxury brands in shiny malls to hidden gems in busy markets. Moreover, Shanghai's culinary landscape is a testament to its multiculturalism, offering a symphony of flavors that range from traditional street food like xiaolongbao (soup dumplings) to avant-garde dining experiences.</p>
+
+            <h3>Photo Gallery</h3>
+            <div class="container">
+            <figure>
+                <img src="images/shanghai_thebund.jpg" width = "200" height = "200" alt="Big buildings">
+                <figcaption>The Bund at night</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/shanghai_disney.jpg" width = "200" height = "200" alt="Castle">
+                <figcaption>Enchanged Storybook Castle at Shanghai Disneyland</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/shanghai_soupdumplings.jpg" width = "200" height = "200" alt="Bamboo steamer">
+                <figcaption>Shanghai’s famous soup dumplings</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/shanghai_lanterns.jpg" width = "200" height = "200" alt="A street with hanging lanterns">
+                <figcaption>Hanging lanterns to celebrate Chinese New Year</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/shanghai_museum.jpg" width = "200" height = "200" alt="A building with large glass windows">
+                <figcaption>Shanghai Natural History Museum Building</figcaption>
+            </figure>
+            </div>
+        </div>
+        <div id = "yellowstone">
+            <h2>Yellowstone</h2>
+            
+            <img src="images/yellowstone_cauldron.gif" width="400" alt="Bubbling cauldron.">
+            <img src="images/yellowstone_cauldron.jpg" width = "400" alt="Bubbling cauldron">
+        
+            <h3>Geographical Location: North America</h3>
+            <p>Yellowstone is the first national park in the United States. It covers over 2.2 million acres, and provides an opportunity to see wildlife and explore geothermal areas.  In fact, Yellowstone contains about half the world's active geysers.</p>
+            <p>These unique opportunities also bring out a lot of bad decisions among the tourists.  Every year visitors injure themselves or the wildlife by getting close to the animals.  You  can see examples of people making bad decisions by visiting <a href ="https://www.facebook.com/groups/yellowstonenationalparkinvasionoftheidiots/">Yellowstone National Park: Invasion of the Idiots</a>, <a href="https://www.instagram.com/touronsofyellowstone/?hl=en">Tourons of Yellowstone</a>, or  <a href="https://cowboystatedaily.com/">Cowboy State Daily</a>.</p>
+        
+            <h3>Photo Gallery</h3>
+            <div class="container">
+            <figure>
+                <img src="images/yellowstone_travertine.JPG" width = "200" height = "200" alt="A large mound">
+                <figcaption>Mammoth Hot Springs has a number of actively forming Travertine terraces.</figcaption>
+            </figure>
+        
+            <figure>
+                <img src="images/yellowstone_sunset.jpg" width = "200" height = "200" alt="Sunset over mountains">
+                <figcaption>The drive to Lamar Valley requires some dangerous roads.  But the result is amazing sunset views.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/yellowstone_sulphur_springs.JPG" width = "200" height = "200" alt="A large spring">
+                
+                <figcaption>If you can handle the odor, the Yellowstone Sulphur Springs is a great place to hike.</figcaption>
+            </figure>
+        
+        
+            <figure>
+                <video width="200"  controls>
+                    <source src="images/yellowstone_prism.MOV">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>The multicolored layers get their hues from different species of bacteria living in the cooler water around the spring.</figcaption>
+            </figure>
+        
+        
+            <figure>
+                <video width="200"  controls>
+                    <source src="images/yellowstone_buffalo.MOV">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>The buffalo were so common along the roads in Yellowstone that our mantra became "If it ain't lickin the car, we aren't stopping."</figcaption>
+            </figure>
+
+            </div>
+        
+        </div>
+    </main>
+</body>
+</html>
