@@ -11,18 +11,15 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        // Get all dropdown buttons
         var dropdowns = document.querySelectorAll('.dropdown');
 
-        // Toggle dropdown menu on button click
         for (var i = 0; i < dropdowns.length; i++) {
             dropdowns[i].addEventListener("click", function(event) {
-                event.stopPropagation(); // Prevents the click event from propagating to the document level
+                event.stopPropagation(); 
                 var dropdownContent = this.querySelector('.dropdown-content');
-                dropdownContent.classList.toggle('show'); // Toggles the 'show' class on the dropdown menu, displaying or hiding it
+                dropdownContent.classList.toggle('show'); 
             });
 
-            // Close dropdowns when clicking outside of the specific dropdown menu
             document.addEventListener("click", function(event) {
                 for (var i = 0; i < dropdowns.length; i++) {
                     var dropdownContent = dropdowns[i].querySelector('.dropdown-content');
