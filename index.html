@@ -3,325 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel</title>
+    <title>Culinary Adventures: Recipes for Your Stomach</title>
+    <!-- Link to the reset stylesheet -->
     <link rel="stylesheet" href="css/reset.css">
+    <!-- Link to your custom stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400&family=Lora&display=swap" rel="stylesheet">
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
         var dropdowns = document.querySelectorAll('.dropdown');
 
-            for (var i = 0; i < dropdowns.length; i++) {
-                dropdowns[i].addEventListener("hover", function(event) {
-                    event.stopPropagation(); 
-                    var dropdownContent = this.querySelector('.dropdown-content');
-                    dropdownContent.classList.toggle('show');
-                });
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener("click", function(event) {
+                event.stopPropagation(); 
+                var dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.toggle('show'); 
+            });
 
-                document.addEventListener("hover", function(event) {
-                    for (var i = 0; i < dropdowns.length; i++) {
-                        var dropdownContent = dropdowns[i].querySelector('.dropdown-content');
-                        if (dropdownContent.classList.contains('show') && !dropdowns[i].contains(event.target)) {
-                            dropdownContent.classList.remove('show');
-                        }
+            document.addEventListener("click", function(event) {
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var dropdownContent = dropdowns[i].querySelector('.dropdown-content');
+                    if (dropdownContent.classList.contains('show') && !dropdowns[i].contains(event.target)) {
+                        dropdownContent.classList.remove('show');
                     }
-                });
-            }
-        });
+                }
+            });
+        }
+    });
+
     </script>
 
 </head>
-
 <body>
-    <header>
-        <div id="skip"><a href = "#main">Skip to Main Content</a></div>
-        <nav>
-            <ul>
-                <!-- <li><a href="index.html">Travel</a></li> -->
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Travel ▾</a>
-                    <div class="dropdown-content">
-                        <a href="#new-york">New York City</a>
-                        <a href="#toronto">Toronto</a>
-                        <a href="#korea">Seoul</a>
-                        <a href="#new-orleans">New Orleans</a>
-                        <a href="#quebec">Quebec</a>
-                    </div>
-                </li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="pets.html">Pets</a></li>
-            </ul>
-        </nav>
-
-        <div class = "travel-title">
-            <h1 class="slide">Travel</h1>
-        </div>
-    </header>    
-
-    <main class = "main-container" id = "main">
-        <div class = "container1" id = "new-york">
-            <h2>New York City, USA</h2>
-
-            <div class="photos">
-                <img src="images/new_york_central_park.jpeg" alt="Central Park">
-            </div>
-
-            <div class="text-title">
-                <p>Geographical Location: North America</p>
-            </div>
-
-            <div class="text-box">
-                <p>New York City, often referred to as "The City that Never Sleeps" is a bustling metropolis characterized by its iconic skyline dominated by towering skyscrapers such as the Empire State Building and One World Trade Center. The city is a melting pot of cultures, with diverse neighborhoods like Chinatown, Harlem, and Little Italy contributing to its vibrant and eclectic atmosphere. </p>
-                <p>Central Park offers a serene escape from the urban hustle, while Times Square pulsates with the energy of Broadway theaters and neon lights. From the historic Statue of Liberty to the trendy neighborhoods of Williamsburg and SoHo, New York City is a dynamic tapestry of history, culture, and innovation.</p>
-            </div>
-
-            <h3>Photo Gallery</h3>
-            <div class="photo-gallery">
-
-                <div tabindex="0" role="group" aria-label="Bryant Parke">
-                    <img class="travel_static" src="images/new_york_bryant.jpeg" alt="Bryant Park">
-                    <p>Bryant Park</p>
+    <header><div class="header-animation"><h1>Recipes</h1></div></header>
+    <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html">Home/Recipes</a></li> -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Home/Recipes ▾</a>
+                <div class="dropdown-content">
+                    <a href="#tomato-basil-spaghetti">Tomato Basil Spaghetti</a>
+                    <a href="#prosciutto-avocado-poached-egg-toast">Prosciutto Avocado Poached Egg Toast</a>
+                    <a href="#filet-mignon">Filet Mignon</a>
+                    <a href="#dakgalbi">Dakgalbi</a>
+                    <a href="#prosciutto-and-melon">Prosiutto and Melon</a>
                 </div>
-
-                <div tabindex="0" role="group" aria-label="NYC Bagle">
-                    <img src="images/new_york_bagel.jpeg" alt="NYC Bagels">
-                    <p>NYC Bagels</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Summit One Vanderbilt">
-                    <img src="images/new_york_summit.jpeg" alt="Summit One Vanderbilt">
-                    <p>Skyline from Summit One Vanderbuilt</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Soho">
-                    <img src="images/new_york_soho.jpeg" alt="Soho">
-                    <p>Soho</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="NYC street">
-                    <img src="images/new_york_city.jpeg" alt="NYC Street">
-                    <p>NYC Street</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Browadway Show Wicked">
-                    <img src="images/new_york_broadway.jpeg"  alt="Broadway Show Wicked">
-                    <p>Broadway Show Wicked</p>
-                </div>
-            </div>
-        </div>
-
-        <div class = "container2" id = "toronto">
-            <h2>Toronto, Canada</h2>
-    
-            <div class="photos">
-                <img src="images/toronto_skyline.JPG" alt="Toronto Skyline">
-            </div>
-
-            <div class="text-title">
-                <p>Geographical Location: North America</p>
-            </div>
-
-            <div class="text-box">
-                <p>Toronto, Canada's largest city, is a dynamic metropolis with a captivating blend of diverse cultures and modern urbanity. Nestled on the northwestern shore of Lake Ontario, Toronto boasts a striking skyline marked by iconic structures like the CN Tower. In every corner, Toronto exudes a welcoming energy that captures the essence of its cosmopolitan spirit.</p>
-                <p>The city's multicultural fabric is reflected in its vibrant neighborhoods, each offering a unique character and culinary experience. From the historic Distillery District to the bustling streets of Kensington Market, Toronto's rich tapestry unfolds through its eclectic mix of art, entertainment, and global cuisine.</p>
-            </div>
-
-            <h3>Photo Gallery</h3>
-            <div class="photo-gallery">
-                <div tabindex="0" role="group" aria-label="Berzy Park">
-                    <img src="images/toronto_berzy_park.jpeg" alt="Berzy Park">
-                    <p>Berzy Park</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Christmas Tree">
-                    <img src="images/toronto_christmas.jpeg" alt="Christmas Tree">
-                    <p>Christmas Tree</p>
-                </div>
-                    
-                <div tabindex="0" role="group" aria-label="Old Toronto">
-                    <img src="images/toronto_old.jpeg" alt="Old Toronto">
-                    <p>Old Toronto</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Riverdale Park">
-                    <img src="images/toronto_sunset.jpeg" alt="Riverdale Park">
-                    <p>Riverdale Park</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Dundas">
-                    <img src="images/toronto_dundas.jpeg" alt="Dundas">
-                    <p>Dundas</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="AGO">
-                    <img src="images/toronto_ago.jpeg" alt="Art Gallery of Ontario">
-                    <p>Art Gallery of Ontario</p>
-                </div>
-            </div>
-        </div>
-
-        <div class = "container3" id = "korea">
-            <h2>Seoul, Korea</h2>
-
-            <div class="photos">
-                <img src="images/korea_namsan.jpeg" alt="Korea Skyline">
-            </div>
-
-            <div class="text-title">
-                <p>Geographical Location: Asia</p>
-            </div>
+            </li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="pets.html">Pets</a></li>
+        </ul>
+    </nav>
+    <main id = "main">
+    <div id="tomato-basil-spaghetti">
+        <h2>Tomato Basil Spaghetti</h2>
+        <span>Origin: Italian</span>
+        <span>Source: Personal Recipe</span>
+        <span>Category: Main Dish</span>
+        <br>
+        <img src="images/tomato_basil_spagetti.jpg" width="400" height = "500" alt="Tomato Basil Spaghetti">
         
-            <div class="text-box">
-                <p>Seoul, the capital of South Korea, stands as a dynamic blend of tradition and modernity. Nestled along the banks of the Han River, this sprawling metropolis seamlessly integrates ancient palaces and temples with futuristic architecture and cutting-edge technology. The city's skyline is marked by towering skyscrapers and the iconic N Seoul Tower, offering panoramic views of the urban landscape.</p>
-                <p>Seoul's vibrant districts, from the trendy shops in Myeongdong to the historic alleys of Bukchon Hanok Village, showcase a rich cultural tapestry. Boasting a robust culinary scene, the city is a haven for food enthusiasts, with street markets like Gwangjang providing a sensory feast of traditional Korean dishes. The juxtaposition of ancient traditions and cutting-edge innovation makes Seoul a captivating destination.</p>
-            </div>
-            
-            <h3>Photo Gallery</h3>
-            <div class="photo-gallery">
-                <div tabindex="0" role="group" aria-label="Dongdaemun">
-                    <img src="images/korea_dongdae.jpeg" alt="Dongdaemun">
-                    <p>Dongdaemun</p>
-                </div>
+        <p>Tomato Basil Spaghetti is a classic Italian pasta dish that embodies the flavors of simplicity and freshness. 
+        The combination of ripe tomatoes, fragrant basil, garlic, and al dente spaghetti creates a dish that is both satisfying and easy to prepare.</p>
+        
+        <h3>Recipe Ingredients</h3>
+        <ul>
+            <li>Spaghetti</li>
+            <li>Olive oil</li>
+            <li>Large ripe tomatoes</li>
+            <li>Fresh basil leaves</li>
+            <li>Salt</li>
+            <li>Pepper</li>
+        </ul>
+        
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>Cook the spaghetti according to the package instructions until al dente. Drain and set aside.</li>
+            <li>In a large skillet, heat the olive oil over medium heat. Add the minced garlic and sauté until fragrant.</li>
+            <li>Dice the tomatoes and add them to the skillet. Cook for 5-7 minutes, seasoning with salt and pepper to taste.</li>
+            <li>Add the cooked spaghetti to the skillet, tossing to combine with the tomato mixture. Cook for an additional 2-3 minutes.</li>
+            <li>Plate the spaghetti and garnish with fresh basil leaves.</li>
+        </ol>
+        
 
-                <div tabindex="0" role="group" aria-label="Naksan Park">
-                    <img src="images/korea_wall.jpeg" alt="Naksan Park">
-                    <p>Naksan Park</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Gyeongbokgung Palace">
-                    <img src="images/korea_traditional.JPG" alt="Gyeongbokgung Palace">
-                    <p>Gyeongbokgung Palace</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Chicken Galbi">
-                    <img src="images/korea_food.jpeg" alt="Chicken Galbi">
-                    <p>Chicken Galbi</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Yonsei University">
-                    <img src="images/korea_yonsei.jpeg" alt="Yonsei University">
-                    <p>Yonsei University</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Dinner with Family">
-                    <img src="images/korea_family.jpeg" alt="Dinner with Family">
-                    <p>Dinner with Family</p>
-                </div>
-
-            </div>
+        <h3>Additional Food images</h3>
+        <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/440px-Tomato_je.jpg" width="200" height="180" alt="Tomatoes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg/440px-Basil-Basilico-Ocimum_basilicum-albahaca.jpg" width="200" height="180" alt="Basil">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Spaghetti_spiral%2C_2008.jpg/252px-Spaghetti_spiral%2C_2008.jpg" width="200" height="180" alt="Dried Spagetti">
         </div>
+        <!-- Jeong Min (Dorothy) Hong -->
 
-        <div class = "container4" id = "new-orleans">
-            
-            <h2>New Orleans, USA</h2>
+    </div>
 
-            <div class="photos">
-                <img src="images/new_orleans_sunset.jpeg" alt="Sunset">
-            </div>
-
-            <div class="text-title">
-                <p>Geographical Location: North America</p>
-            </div>
-
-            <div class="text-box">
-                <p>New Orleans, a city steeped in a unique blend of history, culture, and vibrant energy, stands as a jewel along the banks of the Mississippi River. Known for its lively music scene, rich culinary traditions, and festive atmosphere, the Big Easy captivates visitors with its lively spirit.</p>
-                <p>The French Quarter, with its iconic architecture and lively streets, is a testament to the city's Creole heritage, while the sounds of jazz echo through the historic neighborhoods. From the renowned cuisine, with dishes like gumbo and beignets, to the historic allure of St. Louis Cathedral, New Orleans is a sensory delight that beckons exploration and embraces the essence of Southern charm.</p>
-            </div>
-
-            <h3>Photo Gallery</h3>
-            <div class="photo-gallery">
-            
-                <div tabindex="0" role="group" aria-label="Cafe Du Monde">
-                    <img src="images/new_orleans_cafe_du_monde.jpg" alt="Cafe Du Monde">
-                    <p>Cafe Du Monde</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="French Quarter">
-                    <img src="images/new_orleans_french_quarter.jpeg" alt="French Quarter">
-                    <p>French Quarter</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Jackson Square">
-                    <img src="images/new_orleans_jackson_square.JPG" alt="Jackson Square">
-                    <p>Jackson Square</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="City Park">
-                    <img src="images/new_orleans_city_park.jpg" alt="City Park">
-                    <p>City Park</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Fontainbleau Beach">
-                    <img src="images/new_orleans_beach.jpeg" alt="Fontainbleau Beach">
-                    <p>Fontainbleau Beach</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Sea Food Boil">
-                    <img src="images/new_orleans_seafood_boil.jpg" alt="Sea Food Boil">
-                    <p>Sea Food Boil</p>
-                </div>
-                
-            </div>
-            
-        </div>
-
-        <div class = "container5" id = "quebec">
-            <h2>Quebec, Canada</h2>
     
-            <div class="photos">
-                <img src="images/quebec_night_lights.JPG" alt="Quebec Night">
-            </div>
-
-            <div class="text-title">
-                <p>Geographical Location: North America</p>
-            </div>
-
-            <div class="text-box">
-                <p>Quebec, a province in eastern Canada, is a captivating blend of Old World charm and modern sophistication. The heart of French Canadian culture, Quebec City, with its cobbled streets and historic architecture, exudes a European ambiance that transports visitors back in time. The iconic Château Frontenac stands proudly atop the cityscape, overlooking the majestic St. Lawrence River.</p> 
-                <p>Beyond the city, the province unfolds into a diverse landscape of rolling hills, pristine lakes, and charming villages. Montreal, Quebec's vibrant metropolis, offers a cosmopolitan experience with its eclectic neighborhoods, world-class dining, and a thriving arts scene. Rich in history and linguistic heritage, Quebec seamlessly weaves together the contemporary and the traditional, creating a uniquely French-inspired Canadian destination.</p>
-            </div>
-
-            <h3>Photo Gallery</h3>
-            <div class="photo-gallery">
-                <div tabindex="0" role="group" aria-label="Basilique Notre Dame">
-                    <img src="images/quebec_cathedral.jpeg" alt="Basilique Notre Dame">
-                    <p>Basilique Notre Dame</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Ville Marie">
-                    <img src="images/quebec_food.jpeg" alt="Ville Marie">
-                    <p>Restaurant Ville Marie</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Quebec City Night">
-                    <img src="images/quebec_night1.jpeg" alt="Quebec City Night">
-                    <p>Quebec City Night</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Quebec City Street">
-                    <img src="images/quebec_quebec_city.jpeg" alt="Quebec City Street">
-                    <p>Quebec City Street</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="La Citadelle de Quebec">
-                    <img src="images/quebec_hill.jpeg" alt="La Citadelle de Quebec">
-                    <p>La Citadelle de Quebec</p>
-                </div>
-
-                <div tabindex="0" role="group" aria-label="Quartier Petit Champlain">
-                    <img src="images/quebec_night2.jpeg" alt="Quartier Petit Champlain">
-                    <p>Quartier Petit Champlain</p>
-                </div>
-            </div>
+    <div id="prosciutto-avocado-poached-egg-toast">
+        <h2>Prosciutto Avocado Poached Egg Toast</h2>
+        <span>Origin: Italian and American fusion</span>
+        <span>Source: Personal recipe</span>
+        <span>Category: Brunch</span>
+        <br>
+        <img src="images/prosciutto_avocado_poached_egg_toast.jpeg" width="400" height = "500" alt="Prosciutto Avocado Poached Egg Toast">
+        
+        <p>Prosciutto Avocado Poached Egg Toast is a fusion of Italian and American flavors. This dish combines the savory taste of prosciutto with the creaminess avocado and the gooey texture of a poached egg.</p>
+        
+        <h3>Recipe Ingredients</h3>
+        <ul>
+            <li>2 slices of artisanal bread (such as sourdough or ciabatta)</li>
+            <li>2 large eggs</li>
+            <li>2 slices of prosciutto</li>
+            <li>1 ripe avocado, thinly sliced</li>
+            <li>2 tablespoons white vinegar</li>
+            <li>Salt and black pepper, to taste</li>
+            <li>Fresh chives or microgreens (optional, for garnish)</li>
+        </ul>
+        
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>Toast the slices of bread until they reach your desired level of crispiness.</li>
+            <li>While the bread is toasting, bring a large pot of water to a gentle simmer. Add the white vinegar to the simmering water.</li>
+            <li>Carefully crack one egg into a small bowl. Create a gentle whirlpool in the simmering water by stirring it with a spoon, and then slide the egg into the center of the whirlpool. Poach the egg for about 3-4 minutes for a runny yolk, or longer for a firmer yolk. Repeat with the second egg.</li>
+            <li>While the eggs are poaching, arrange the prosciutto slices on top of the toasted bread, followed by the thinly sliced avocado.</li>
+            <li>When the poached eggs are done, remove them from the water with a slotted spoon, allowing excess water to drain. Place one poached egg on each toast.</li>
+            <li>Season the eggs with salt and black pepper to taste, and garnish with fresh chives or microgreens if desired.</li>
+            <li>Serve the Prosciutto Avocado Poached Egg Toast immediately, and enjoy!</li>
+        </ol>
+        
+        <h3>Additional Food Images</h3>
+        <div class="container">
+        <img src="images/prosciutto.jpeg" width="200" height="180" alt="Prosciutto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Six_eggs_views_from_the_top_on_a_white_background.jpg/440px-Six_eggs_views_from_the_top_on_a_white_background.jpg" width="200" height="180" alt="Eggs">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Avocado_Hass_-_single_and_halved.jpg/440px-Avocado_Hass_-_single_and_halved.jpg" width="200" height="180" alt="Avocado">
         </div>
 
-    </main>
-    <footer>
-        <p>University of Michigan School of Information</p>
-        <p>&copy; Dorothy Hong - SI 339</p>
-    </footer>
+       <!-- Jeong Min (Dorothy) Hong -->
 
+    </div>
+
+
+    <div id="filet-mignon">    
+        <h2>Filet Mignon</h2>
+        <span>Origin: French</span>
+        <span>Source: Personal recipe</span>
+        <span>Category: Main Dish</span>
+        <br>
+        <img src="images/fillet_mignon.jpg" width="400" height = "500" alt="Filet Mignon">
+        
+        <p>Filet Mignon is a French steak dish. It is the epitome of fine dining and is the perfect choice for special occasions or when you want to treat yourself to an exceptional meal.</p>
+        
+        <h3>Recipe Ingredients</h3>
+        <ul>
+            <li>Filet mignon steaks</li>
+            <li>Salt and black pepper</li>
+            <li>Olive oil</li>
+            <li>Cloves garlic, minced</li>
+            <li>Fresh rosemary</li>
+            <li>Unsalted butter</li>
+            <li>Red wine</li>
+        </ul>
+        
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>Preheat your oven to 400°F (200°C).</li>
+            <li>Season both sides of the filet mignon steaks generously with salt and black pepper.</li>
+            <li>In an oven-safe skillet, heat the olive oil over high heat until it's almost smoking.</li>
+            <li>Carefully add the seasoned filet mignon steaks to the hot skillet. Sear the steaks for about 2-3 minutes on each side, or until a golden-brown crust forms.</li>
+            <li>Add minced garlic and rosemary sprigs to the skillet during the last minute of searing for additional flavor.</li>
+            <li>Transfer the skillet with the seared steaks to the preheated oven. Roast for about 5-7 minutes for medium-rare, or longer to your preferred level of doneness.</li>
+            <li>Remove the skillet from the oven and transfer the steaks to a plate. Cover them loosely with aluminum foil and let them rest for 5 minutes.</li>
+            <li>While the steaks are resting, you can optionally deglaze the skillet with red wine or beef broth, scraping up any browned bits from the bottom. Reduce the liquid by half and whisk in the butter to create a simple pan sauce.</li>
+            <li>Serve the Filet Mignon steaks hot, drizzled with the pan sauce if desired.</li>
+        </ol>
+        
+
+        <h3>Additional Food images</h3>
+        <div class="container">
+        <img src="images/steak.jpeg" width="200" height="180" alt="steak">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/RosemarySprig.jpg/440px-RosemarySprig.jpg" width="200" height="180" alt="Rosemary">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Italian_garlic_PDO.JPG/440px-Italian_garlic_PDO.JPG" width="200" height="180" alt="Garlic">
+        </div>
+        <!-- Jeong Min (Dorothy) Hong -->
+    </div>
+
+
+    <div id="dakgalbi">  
+        <h2>Dakgalbi</h2>
+        <span>Origin: Korean</span>
+        <span>Source: Personal recipe</span>
+        <span>Category: Main Dish</span>
+        <br>
+        <img src="images/dakgalbi.jpg" width="400" height = "500" alt="Spicy Chicken Dakgalbi">
+
+        <p>Dakgalbi is a beloved Korean dish known for its spicy and mouthwatering flavors. This main dish is a crowd-pleaser, combining tender pieces of chicken, tasty vegetables, and a spicy sauce that creates a symphony of tastes and textures. Whether you enjoy it as a comforting meal for two or a communal dining experience with friends, this dish is sure to satisfy your craving for a little heat and a lot of flavor.</p>
+
+        <h3>Recipe Ingredients</h3>
+        <ul>
+            <li>Boneless chicken thighs, cut into bite-sized pieces</li>
+            <li>Cabbage</li>
+            <li>Onion</li>
+            <li>Potato</li>
+            <li>Rice cakes</li>
+            <li>Vegetable oil</li>
+            <li>Cloves garlic, minced</li>
+            <li>Gochujang (Korean red pepper paste)</li>
+            <li>Soy sauce</li>
+            <li>Sugar</li>
+            <li>Mirin (rice wine)</li>
+            <li>Sesame oil</li>
+        </ul>
+
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>In a large skillet or pan, heat the vegetable oil over medium-high heat. Add the minced garlic and sauté for about 30 seconds until fragrant.</li>
+            <li>Add the sliced cabbage, onions, and potato to the skillet. Stir-fry for about 5-7 minutes or until the vegetables start to soften.</li>
+            <li>Add the chicken pieces to the skillet and cook until they start to brown and are no longer pink in the center.</li>
+            <li>Stir in the gochujang, soy sauce, sugar, and mirin. Continue cooking for another 2-3 minutes</li>
+            <li>Gently mix in the Korean rice cakes (tteok) and cook for an additional 3-5 minutes.</li>
+            <li>Drizzle sesame oil over the dish and toss everything together. Cook for another 2 minutes.</li>
+            <li>Serve the Spicy Chicken Dakgalbi hot, garnished with sesame seeds if desired.</li>
+        </ol>
+
+        <h3>Additional Food images</h3>
+        <div class="container">
+        <img src="images/chicken.jpeg" width="200" height="180"  alt="Chicken">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Gochujang_%28chilli_paste%29.jpg/440px-Gochujang_%28chilli_paste%29.jpg" width="200" height="180"  alt="Gochujang">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Chou_1.jpg/440px-Chou_1.jpg" width="200" height="180"  alt="Cabbage">
+        </div>
+        <!-- Jeong Min (Dorothy) Hong -->
+
+    </div>
+
+
+    <div id="prosciutto-and-melon">  
+        <h2>Prosciutto and Melon</h2>
+        <span>Origin: Italian</span>
+        <span>Source: Personal recipe</span>
+        <span>Category: Appetizer</span>
+        <br>
+        <img src="images/prosciutto_and_melon.jpg" width="400" height = "500" alt="Prosciutto and Melon">
+        
+        <p>Prosciutto and Melon is a classic Italian appetizer that combines the sweet and juicy essence of ripe melon with the savory, saltinesshinly sliced prosciutto. It's a delightful appetizer that's both elegant and effortless.</p>
+        
+        <h3>Recipe Ingredients</h3>
+        <ul>
+            <li>Ripe cantaloupe or honeydew melon, cut into wedges</li>
+            <li>Prosciutto</li>
+        </ul>
+        
+        <h3>Recipe Steps</h3>
+        <ol>
+            <li>Arrange the bite-sized melon pieces or melon balls on a serving platter.</li>
+            <li>Take a slice of prosciutto and gently fold or wrap it around each piece of melon.</li>
+            <li>Continue this process until all the melon pieces are wrapped with prosciutto.</li>
+            <li>Serve the Prosciutto and Melon as an appetizer or a refreshing snack.</li>
+        </ol>
+        
+
+        <h3>Additional Food images</h3>
+        <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cantaloupes.jpg/440px-Cantaloupes.jpg" width="200" height="180" alt="Cantalope">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Honeydew.jpg/440px-Honeydew.jpg" width="200" height="180" alt="Honey Dew Melon">
+        <img src="images/prosciutto.jpeg" width="200" height="180" alt="Prosciutto">
+        </div>
+
+        <!-- Jeong Min (Dorothy) Hong -->
+    </div>
+    </main>
 </body>
 </html>
